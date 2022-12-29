@@ -120,10 +120,9 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
 
-let oyuncu = 0
-let bilgisayar = Math.floor( Math.random() * 3);
 
-if (oyuncu === 0){
+
+/* if (oyuncu === 0){
 console.log('Taş');
 }
 if (oyuncu === 1){
@@ -140,24 +139,38 @@ if (bilgisayar === 1){
 }
 if (bilgisayar === 2){
   console.log('Makas');  
+} */
+function secim (sayi){
+  if (sayi === 0){
+    return ('Taş');  
+  }
+  if (sayi === 1){
+    return ('Kağıt');  
+  }
+  if (sayi === 2){
+    return ('Makas');  
+  }  
 }
+let oyuncu = secim(0);
+console.log(oyuncu);
+let bilgisayar = secim (Math.floor( Math.random() * 3));
  function oyun(oyuncu,bilgisayar){
-if (oyuncu === 0 && bilgisayar === 1){
+if (oyuncu === 'Taş' && bilgisayar === 'Kağıt'){
   return ('Kaybettin!')
 } 
-if (oyuncu === 1 && bilgisayar === 2){
+if (oyuncu === 'Kağıt' && bilgisayar === 'Makas'){
   return ('Kaybettin!')
 }
-if (oyuncu === 2 && bilgisayar === 0){
+if (oyuncu === 'Makas' && bilgisayar === 'Taş'){
   return ('Kaybettin!')
 }
-if (oyuncu === 0 && bilgisayar === 2){
+if (oyuncu === 'Taş' && bilgisayar === 'Makas'){
   return ('Kazandın!')
 }
-if (oyuncu === 2 && bilgisayar === 1){
+if (oyuncu === 'Makas' && bilgisayar === 'Kağıt'){
   return ('Kazandın!')
 }
-if (oyuncu === 1 && bilgisayar === 0){
+if (oyuncu === 'Kağıt' && bilgisayar === 'Taş'){
   return ('Kazandın!')
 }
 if (oyuncu === bilgisayar){
@@ -179,7 +192,7 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 
 let km = 5;
 function milDonusturucu(km){
-  return (km * 0.621371192)
+  return (km * 0.621371)
 }
 console.log(milDonusturucu(km) + ' mil');
 
@@ -195,7 +208,7 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 
 let cm = 5;
 function feetDonusturucu(cm){
-return ( cm * 0.032808399)
+return ( cm / 30.48)
 }
 console.log(feetDonusturucu(cm) + ' feet');
 
@@ -265,6 +278,7 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yapın.
 
 İPUCU - yarın işlenecek array(dizi) konusunu önden araştırman gerekecek. (https://www.w3schools.com/js/js_arrays.asp)
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
+.split("")
 */
 console.clear()
 
