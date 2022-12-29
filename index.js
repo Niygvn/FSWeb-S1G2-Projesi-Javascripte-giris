@@ -282,11 +282,19 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yapın.
 */
 console.clear()
 
-let isim = 'abdurrezzak'
-function sesliHarfSayaci(isim) {
-  return 
-}
 
+function sesliHarfSayaci(isim) {
+  let sesliHarfler = ['a','e','ı','i','o','ö','u','ü'];
+  let harfler = isim.split("");
+  let sayı = 0;
+  for (let i = 0; i < harfler.length; i++){
+    if (sesliHarfler.includes(harfler[i])){
+      sayı++;
+    }
+  }
+  return sayı;
+}
+console.log(sesliHarfSayaci('niyazi workintech'))
 
 
 /* Lütfen bu satırın alt tarafını değiştirmeyin */
