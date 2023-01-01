@@ -289,7 +289,7 @@ function sesliHarfSayaci(isim) {
   let sayı = 0;
   for (let i = 0; i < harfler.length; i++){
     if (sesliHarfler.includes(harfler[i])){
-      sayı++;
+      sayı = sayı + 1;
     }
   }
   return sayı;
